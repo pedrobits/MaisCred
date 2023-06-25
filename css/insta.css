@@ -29,9 +29,9 @@
 
 .wavy-line {
   position: relative;
-  top: 39rem;
+  top: 30rem;
   width: 100%;
-  height: 20px;
+  height: 15px;
   z-index: -1;
   background-image: linear-gradient(
     to right,
@@ -100,38 +100,6 @@ h1 {
   color: #002eb0;
 }
 
-.subhead {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: hsl(60, 89%, 52%);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 3%;
-  margin: 10px;
-  margin-bottom: 20px;
-  max-width: 600px;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.subhead .col-lg {
-  padding: 2rem;
-  font-size: 24px;
-  color: #002eb0;
-}
-
-.subhead p {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 1.5;
-  font-size: 15px;
-  color: #002eb0;
-}
-
 .instagram-feed {
   text-align: center;
   flex-direction: column;
@@ -164,6 +132,59 @@ h1 {
   height: auto;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .instagram-feed {
+    padding: 5rem; /* Reduza o valor do padding para tornar o feed menor */
+  }
+}
+
+.subhead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: hsl(60, 89%, 52%);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 3%;
+  margin: 10px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+  min-height: 300px; /* Alterado para min-height para permitir o crescimento do conteúdo */
+  overflow: hidden;
+}
+
+.subhead .col-lg {
+  padding: 2rem;
+  font-size: 24px;
+  color: #002eb0;
+}
+
+.subhead p {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #002eb0;
+}
+
+@media (max-width: 768px) {
+  .subhead {
+    padding: 5%; /* Aumenta o espaço interno nos dispositivos móveis */
+  }
+
+  .subhead .col-lg {
+    font-size: 18px; /* Reduz o tamanho da fonte nos dispositivos móveis */
+  }
+
+  .subhead p {
+    font-size: 14px; /* Reduz o tamanho da fonte nos dispositivos móveis */
+  }
+}
+
 
 .page-sobre .subhead[data-aos="slide-left"],
 .page-sobre .subhead[data-aos="slide-right"] {

@@ -15,6 +15,11 @@ body {
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -94,6 +99,8 @@ body {
 
   .navbar__toggle-label {
     display: block;
+    font-size: 24px;
+    cursor: pointer;
   }
 
   .navbar__nav-links {
@@ -102,21 +109,42 @@ body {
     padding-top: 10px;
     text-align: center;
     width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--navbar-background);
   }
 
   .navbar__nav-links.show {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 
   .nav-links__item {
     margin: 10px 0;
+  }
+
+  .nav-links__link {
+    color: var(--navbar-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links__link:hover {
+    color: var(--navbar-color-hover);
   }
 }
 
 .hero {
   font-family: "Roboto", sans-serif;
   position: relative;
-  height: 100vh; /* Define a altura em relação à altura da janela do navegador */
+  height: 100vh;
+  width: 100%; /* Define a altura em relação à altura da janela do navegador */
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0),
@@ -129,10 +157,9 @@ body {
   background-position: center;
 }
 
-/* Regra de mídia para ajustar a altura em dispositivos menores */
 @media (max-width: 768px) {
   .hero {
-    height: 500px; /* Ajuste a altura para dispositivos móveis */
+    display: none;
   }
 }
 
@@ -163,10 +190,10 @@ body {
   justify-content: center;
   content: "";
   position: absolute;
-  top:85%;
+  top: 85%;
   width: 100%;
   height: 20%;
-  background-color: #FCFC30; /* Exemplo: usando azul como cor de fundo */
+  background-color: #fcfc30; /* Exemplo: usando azul como cor de fundo */
   opacity: 1;
   transform: scaleX(0);
   transform-origin: left;
@@ -189,13 +216,6 @@ body {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .hero__description {
-    text-align: center;
-    font-size: 10px;
-  }
 }
 
 #backToTop {
