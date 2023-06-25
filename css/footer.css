@@ -59,7 +59,9 @@
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer .row.centro {
@@ -72,32 +74,38 @@
   margin-bottom: 30px;
 }
 
-@media (max-width: 767px) {
-  #footer .col-lg-3 {
-    margin-bottom: 30px;
+@media (max-width: 768px) {
+  #footer {
+    padding: 20px 0; /* Reduzido o padding para 20px na parte superior e inferior em dispositivos móveis */
   }
 
-  /* Adicione estilos específicos para telas menores aqui */
   #footer .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px; /* Adicionado um espaçamento interno de 15px na esquerda em dispositivos móveis */
+    padding-right: 15px; /* Adicionado um espaçamento interno de 15px na direita em dispositivos móveis */
   }
 
   #footer h5 {
-    font-size: 16px;
-  }
-
-  #footer ul {
-    padding-left: 0;
+    font-size: 16px; /* Reduzido o tamanho da fonte para 16px em dispositivos móveis */
   }
 
   #footer ul li {
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* Reduzido o espaçamento inferior para 8px em dispositivos móveis */
   }
 
   #footer .social a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 32px; /* Reduzido a largura para 32px em dispositivos móveis */
+    height: 32px; /* Reduzido a altura para 32px em dispositivos móveis */
+    line-height: 32px; /* Reduzido a altura da linha para 32px em dispositivos móveis */
+    font-size: 14px; /* Reduzido o tamanho da fonte para 14px em dispositivos móveis */
+    margin-right: 8px; /* Reduzido o espaçamento direito para 8px em dispositivos móveis */
+  }
+
+  #footer .row {
+    flex-wrap: wrap; /* Alterado para quebrar a linha em dispositivos móveis */
+  }
+
+  #footer hr {
+    margin-top: 20px; /* Reduzido o espaçamento superior para 20px em dispositivos móveis */
+    margin-bottom: 20px; /* Reduzido o espaçamento inferior para 20px em dispositivos móveis */
   }
 }

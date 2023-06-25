@@ -103,7 +103,7 @@ h1 {
 .instagram-feed {
   text-align: center;
   flex-direction: column;
-  padding: 10rem;
+  padding: 10%;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
