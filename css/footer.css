@@ -59,9 +59,7 @@
 
 .row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #footer .row.centro {
@@ -77,6 +75,10 @@
 @media (max-width: 768px) {
   #footer {
     padding: 20px 0; /* Reduzido o padding para 20px na parte superior e inferior em dispositivos móveis */
+  }
+
+  #footer img{
+    display: none;
   }
 
   #footer .container-fluid {
