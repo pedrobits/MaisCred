@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos de Uso</title>
+    <style>
+      /* Reset CSS */
+      html,
+      body,
+      div,
+      span,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      img,
+      ul,
+      ol,
+      li,
+      form,
+      label,
+      input,
+      textarea,
+      button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      button,
+      input,
+      textarea {
+        outline: none;
+      }
+
+      /* Responsividade */
+      @media only screen and (max-width: 600px) {
+        /* Adicione as regras de estilo para dispositivos móveis aqui */
+      }
+
+      #backToTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: #ff7100;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      #backToTopButton svg {
+        fill: white;
+        height: 20px;
+        width: 20px;
+      }
+
+      #backToTopButton:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        background-color: #ff8500;
+      }
+
+      #backToTopButton.hidden {
+        display: none;
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+      }
+
+      #backToTopButton.fade-in {
+        animation: fade-in 0.3s ease forwards;
+      }
+
+      #backToTopButton.fade-out {
+        animation: fade-out 0.3s ease forwards;
+      }
+
+      .col-1,
+      .col-2,
+      .col-3,
+      .col-4,
+      .col-5,
+      .col-6,
+      .col-7,
+      .col-8,
+      .col-9,
+      .col-10,
+      .col-11,
+      .col-12,
+      .col,
+      .col-auto,
+      .col-sm-1,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12,
+      .col-sm,
+      .col-sm-auto,
+      .col-md-1,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12,
+      .col-md,
+      .col-md-auto,
+      .col-lg-1,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12,
+      .col-lg,
+      .col-lg-auto,
+      .col-xl-1,
+      .col-xl-2,
+      .col-xl-3,
+      .col-xl-4,
+      .col-xl-5,
+      .col-xl-6,
+      .col-xl-7,
+      .col-xl-8,
+      .col-xl-9,
+      .col-xl-10,
+      .col-xl-11,
+      .col-xl-12,
+      .col-xl,
+      .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .page-sobre .subhead {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-size: 240%;
+        line-height: 110%;
+        color: black;
+        text-align: left;
+      }
+
+      .page-sobre .subhead b {
+        color: #ff6c00;
+      }
+
+      .pagina {
+        padding: 60px 5%;
+        max-width: 800px; /* Ajuste a largura conforme desejado */
+        margin: 0 auto;
+        text-align: justify;
+        font-family: "Ubuntu", sans-serif;
+        line-height: 160%;
+        font-weight: 400;
+        font-size: 100%;
+        color: #434142;
+        overflow-x: hidden; /* Adicionado para ocultar o scroll horizontal */
+      }
+
+      .pagina.page-sobre {
+        overflow: visible;
+      }
+
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        justify-content: center; /* Adicionado para centralizar os elementos horizontalmente */
+      }
+
+      .col-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      @media (min-width: 992px) {
+        .col-lg-4 {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+      }
+
+      .instagram-feed {
+        text-align: center;
+        flex-direction: column;
+        padding: 50px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+      }
+
+      .section-title__text {
+        color: #333333;
+      }
+
+      .instagram-feed__figure {
+        margin: 0;
+        display: inline-block;
+        max-width: 100%;
+      }
+
+      .instagram-feed__figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .page-sobre .subhead[data-aos="slide-left"],
+      .page-sobre .subhead[data-aos="slide-right"] {
+        opacity: 0;
+        position: relative;
+        transform: translateX(100%);
+      }
+
+      .page-sobre .subhead[data-aos="slide-left"].aos-animate,
+      .page-sobre .subhead[data-aos="slide-right"].aos-animate {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.8s, transform 0.8s;
+      }
+      body {
+        font-family: "Ubuntu", sans-serif;
+        background-color: #f6f6f6;
+        color: #333333;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      ol li {
+        margin-bottom: 10px;
+      }
+
+      strong {
+        color: #ff6c00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagina">
+      <h1>
+        A MaisCred Digital inscrita no CNPJ: 25.356.075/0001-30, com o endereço
+        localizado na Avenida Newton Prado, n° 2776, Sala 3 na cidade de
+        Pirassununga do estado de São Paulo, única e exclusiva proprietária no
+        domínio do site, estabelece as presentes condições de uso para a
+        utlização do site.
+      </h1>
+
+      <h2>Das definições</h2>
+
+      <p>
+        Os termos constantes nesse Termo de Uso, terão o significado
+        estabelecido abaixo, seja no plural ou no singular:
+      </p>
+
+      <ol>
+        <li>
+          <strong>PARCEIROS</strong><br />
+          Bancos, Promotoras, Corretora de Seguro entre outros.
+        </li>
+        <li>
+          <strong>ACEITAR OU ACEITE</strong><br />
+          Significa o ato do usuário realizar ações do site seguidas do aviso de
+          "Li e aceito os Termos de Uso" disposta no site. Tal ato implica no
+          consetimento prévio, expresso e informado do usuário em relação ao
+          todo o disposto em tais documentos.
+        </li>
+        <li>
+          <strong>BLOG</strong><br />
+          Significa toda e qualquer informação disponibilizada ou por meio do
+          site, tais como textos, dados, software, imagens, vídeos, áudios,
+          recursos interativos etc; incluindo se os códigos fontes empregados
+          para a exibição desse conteúdo, como aqueles em linguagens HTML, CSS e
+          PHP.
+        </li>
+        <li>
+          <strong>DADOS FINANCEIROS</strong><br />
+          Significa qualquer dados do usuário coletado pela MaisCred Digital
+          diretamente nos sites de instituições financeiras, que detalhe, de
+          forma específica e pessoal, informações sobre a(s) sua(s) conta(s),
+          incluindo, sem limitação, a renda do usuário.
+        </li>
+        <li>
+          <strong>DADOS PESSOAIS</strong><br />
+          Significa qualquer dado disponibilizado pelo usuário que, de alguma
+          forma, o identifique, tais como, mas não se limitando a nome, cpf,
+          endereço, data de nascimento, número de telefone, endereço de email
+          entre outros.
+        </li>
+        <li>
+          <strong>USUÁRIO</strong><br />
+          Significa um pessoa física, maior de idade, com plena capacidade de
+          contratar, que acessa o site e realiza o seu cadastro pessoal de modo
+          a usufruir das funcionalidades oferecidas pela MaisCred Digital,
+          aderindo dessa forma automaticamente ao Termo de Uso e Política de
+          Privacidade.
+        </li>
+      </ol>
+
+      <p>
+        O aceite do "Termos de Uso", iria implicar no reconhecimento, pelo
+        usuário, de que ele leu e entendeu todos os termos constantes neste
+        documento. Caso o usuário tenha qualquer dúvida sobre o "Termo de Uso",
+        a MaisCred Digital recomenda que o usuário entre em contato com a
+        MaisCred Digital antes de aceitar estar sujeito ao mesmo.
+      </p>
+    </div>
+  </body>
+</html>

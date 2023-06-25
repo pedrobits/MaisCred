@@ -1,0 +1,99 @@
+.explanation {
+  background-color: #f8f8f8;
+  padding: 8rem; /* Reduzido o padding para 3rem */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-container {
+  max-width: 1140px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.explanation__content {
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  max-width: 90%; /* Definido uma largura máxima responsiva */
+  margin: 0 auto; /* Centralizado horizontalmente */
+}
+
+.explanation__img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  padding-right: 20px; /* Reduzido o padding para 20px */
+  height: 30%;
+}
+
+.explanation__img img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.explanation__text-content {
+  flex: 2;
+  text-align: left;
+}
+
+.explanation__title {
+  font-size: 24px; /* Reduzido o tamanho da fonte para 24px */
+  margin-bottom: 10px; /* Reduzido a margem inferior para 10px */
+}
+
+.explanation__text {
+  font-size: 14px; /* Reduzido o tamanho da fonte para 14px */
+  line-height: 1.5;
+}
+
+.swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #888;
+  opacity: 0.7;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem; /* Reduzido a margem inferior para 3rem */
+}
+
+.section-title__text {
+  font-size: 3rem; /* Reduzido o tamanho da fonte para 3rem */
+  font-weight: bold;
+  color: #000000;
+}

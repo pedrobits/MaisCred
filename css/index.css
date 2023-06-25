@@ -1,0 +1,123 @@
+body {
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset CSS */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+form,
+label,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+  body {
+    /* Estilos para dispositivos móveis */
+  }
+  
+  /* Adicione outras regras de estilo para dispositivos móveis aqui */
+}
+
+#backToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff7100;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTopButton svg {
+  fill: white;
+  height: 20px;
+  width: 20px;
+}
+
+#backToTopButton:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background-color: #ff8500;
+}
+
+#backToTopButton.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+#backToTopButton.fade-in {
+  animation: fade-in 0.3s ease forwards;
+}
+
+#backToTopButton.fade-out {
+  animation: fade-out 0.3s ease forwards;
+}
